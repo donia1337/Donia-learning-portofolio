@@ -313,10 +313,52 @@ x = str("s1") # x will be 's1'
 y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
 
+
+
+#You can assign a multiline string to a variable by using three quotes """. Or three single quotas. '''
+
 a = """Lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
 print(a)
+
+#Get the character at position 1 (remember that the first character has the position 0).
+
+a = "Hello, World!"
+print(a[1])
+
+#Since strings are arrays, we can loop through the characters in a string, with a for loop.
+#Loop through the letters in the word "banana"
+
+word = "banana"
+for letter in word:
+  print(letter)
+
+for x in "banana":
+  print(x)
+
+
+#To get the length of a string, use the len() function.
+
+a = "Hello, World!"
+print(len(a))
+
+#To check if a certain phrase or character is present in a string, we can use the keyword in.
+#Check if "free" is present in the following text.
+
+txt = "The best things in life are free!"
+print("free" in txt)
+
+#Use it in an if statement:
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+
+
+
+
+
 
 
