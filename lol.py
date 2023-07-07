@@ -357,6 +357,73 @@ if "free" in txt:
   print("Yes, 'free' is present.")
 
 
+#To check if a certain phrase or character is NOT present in a string, we can use the keyword not in.
+
+
+txt = "The best things in life are free!"
+print("expensive" not in txt)
+
+#Use it in an if statement.
+
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+  print("No, 'expensive' is NOT present.")
+
+
+#You can return a range of characters by using the slice syntax.
+#Specify the start index and the end index, separated by a colon, to return a part of the string.
+
+b = "Hello, World!"
+print(b[2:5])
+
+#By leaving out the start index, the range will start at the first character.
+#Get the characters from the start to position 5 (not included).
+
+b = "Hello, World!"
+print(b[:5])
+
+#By leaving out the end index, the range will go to the end.
+
+b = "Hello, World!"
+print(b[2:])
+
+#Use negative indexes to start the slice from the end of the string.
+#Get the characters, From: "o" in "World!" (position -5), To, but not included: "d" in "World!" (position -2):
+
+b = "Hello, World!"
+print(b[-5:-2])
+
+
+#The upper() method returns the string in upper case:
+
+a = "Hello, World!"
+print(a.upper())
+
+#The lower() method returns the string in lower case:
+
+a = "Hello, World!"
+print(a.lower())  
+
+#The strip() method removes any whitespace from the beginning or the end:
+
+a = " Hello, World! "
+print(a.strip())
+
+#The replace() method replaces a string with another string:
+
+a = "Hello, World!"
+print(a.replace("World", "Earth"))
+
+#The split() method splits the string into substrings if it finds instances of the separator.
+
+a = "Hello, World!"
+print(a.split(","))
+
+
+
+
+
+
 
 
 
