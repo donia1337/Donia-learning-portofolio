@@ -2,6 +2,7 @@ print ('Hello to anyone in the world')
 
 #small glucose level check code:
 # Glucose level is an input for this software
+print ('Please write down your glucose level.')
 glucose_level = int(input())
 
 # Display message if glucose level is lower than 70
@@ -17,3 +18,7 @@ elif glucose_level > 170:
 
 else:
     print("Normal Glucose Level")
+
+# Example of list
+countdown = [3, 2, 1]
+print(countdown)
