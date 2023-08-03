@@ -1,4 +1,5 @@
-# My start with Python
-write something
+# Python Repo.
 
-# I have a lot of love to my habibi
+Creating my first Python repository and portfolio on GitHub.
+
+
