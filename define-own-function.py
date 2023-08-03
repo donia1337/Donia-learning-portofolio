@@ -5,5 +5,3 @@ def greet():
 
 # Function call
 greet() 
-
-

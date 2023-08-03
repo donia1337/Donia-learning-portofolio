@@ -13,3 +13,5 @@ data = {
 }
 
 
+a=input()
+print(data.get(a, "Not found"))
