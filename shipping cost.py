@@ -13,6 +13,7 @@ def shipping_cost(weight):
 
 #function call
 
+
 print("Your shipping cost is: ") 
 shipping_cost(weight)
 
