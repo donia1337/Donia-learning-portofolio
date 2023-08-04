@@ -1,5 +1,6 @@
 # Program to take the country name as input and output its corresponding economic freedom rank.
 
+print('Enter the country name to take the financial freedom rank')
 
 data = {
     'Singapore': 1,
