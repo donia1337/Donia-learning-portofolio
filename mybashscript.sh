@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Hello World"
-echo "ANDREAS Sucky sucky"
+echo "ANDREAS is my husband."
 
-echo "Alexis is a golden retriever"
+echo "Alexis is a golden retriever and she is 8 years old."
 
 Alexis="dog"
 echo "Alexis is a $Alexis"
