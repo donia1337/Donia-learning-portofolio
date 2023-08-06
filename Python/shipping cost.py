@@ -8,12 +8,13 @@ print("Please enter weight of the package")
 weight = int(input())
 
 #complete the function
-def shipping_cost(weight):
-  print(weight*5)   
 
-#function call
+#def shipping_cost(weight):
+  #print(weight*5)   
 
 
-print("Your shipping cost is:") 
-shipping_cost(weight)
+
+print(f"Your shipping cost is: {weight * 5}") 
+
+#shipping_cost(weight)
 
