@@ -8,3 +8,10 @@ res = (lambda x,y:x*y/100)(price, perc)
 
 print(res)
 
+
+# Using lambda syntax multiply number on the list by 2.
+
+nums = [11, 22, 33]
+a = list(map(lambda x: x*2, nums))
+
+print(a)
