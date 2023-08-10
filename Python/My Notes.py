@@ -617,6 +617,66 @@ print(list(numbers(11)))
 # Using generators results in improved performance, which is the result of the lazy (on demand) generation of values, which translates to lower memory usage. 
 # Furthermore, we do not need to wait until all the elements have been generated before we start to use them.
 
+# The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+
+# To determine how many items a list has, use the len() function:
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+
+# A list can contain different data types:
+
+list1 = ["abc", 34, True, 40, "male"]
+
+# Python Collections (Arrays)
+# There are four collection data types in the Python programming language:
+""""
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+"""
+
+# Print second item in the list:
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+
+# Negative indexing means start from the end -1 refers to the last item, -2 refers to the second last item etc.
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+
+# Return the third, fourth, and fifth item:
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+
+# Note: The search will start at index 2 (included) and end at index 5 (not included)
+
+# By leaving out the start value, the range will start at the first item:
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[:4])
+
+# By leaving out the end value, the range will go on to the end of the list:
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])
+
+# This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+# Check if "apple" is present in the list:
+
+thislist = ["apple", "banana", "cherry"]
+if "apple" in thislist:
+  print("Yes, 'apple' is in the fruits list")
 
 
 
