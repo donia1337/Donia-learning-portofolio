@@ -679,6 +679,105 @@ if "apple" in thislist:
   print("Yes, 'apple' is in the fruits list")
 
 
+# To change the value of a specific item, refer to the index number:
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+# Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+# Change the second value by replacing it with two new values:
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+# Change the second and third value by replacing it with one value:
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:3] = ["watermelon"]
+print(thislist)
+
+# Insert "watermelon" as the third item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+
+# Using the append() method to append an item:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+# Insert an item as the second position:
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+
+# Add the elements of tropical to thislist:
+# To append elements from another list to the current list, use the extend() method.
+
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+
+# The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist)
+
+# Remove "banana":
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+# The pop() method removes the specified index.
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+# If you do not specify the index, the pop() method removes the last item.
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+#  The del keyword also removes the specified index:
+
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+
+# The del keyword can also delete the list completely.
+
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+# The clear() method empties the list. The list still remains, but it has no content.
+
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+
+
+
+
+
+
 
 
 
