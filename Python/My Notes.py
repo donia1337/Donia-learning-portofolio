@@ -772,6 +772,94 @@ thislist = ["apple", "banana", "cherry"]
 thislist.clear()
 print(thislist)
 
+# You can loop through the list items by using a for loop:
+# Print all items in the list, one by one:
+
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+
+
+#You can also loop through the list items by referring to their index number.
+# Use the range() and len() functions to create a suitable iterable.
+
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i])
+
+
+#You can loop through the list items by using a while loop.
+# Use the len() function to determine the length of the list, 
+# then start at 0 and loop your way through the list items by referring to their indexes.
+# Remember to increase the index by 1 after each iteration.
+
+
+#Print all items, using a while loop to go through all the index numbers
+
+thislist = ["apple", "banana", "cherry"]
+i = 0
+while i < len(thislist):
+  print(thislist[i])
+  i = i + 1
+
+# A short hand for loop that will print all items in a list:
+
+thislist = ["apple", "banana", "cherry"]
+[print(x) for x in thislist]
+
+# List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+# Example:
+# Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+# Without list comprehension you will have to write a for statement with a conditional test inside:
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+# With list comprehension you can do all that with only one line of code:
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]
+
+print(newlist)
+
+# The Syntax
+
+newlist = [expression for item in iterable if condition == True]
+
+# The return value is a new list, leaving the old list unchanged.
+
+# The condition is like a filter that only accepts the items that valuate to True.
+
+# Only accept items that are not "apple":
+newlist = [x for x in fruits if x != "apple"]
+
+# The condition if x != "apple"  will return True for all elements other than "apple", making the new list contain all fruits except "apple".
+# The condition is optional and can be omitted:
+# With no if statement:
+newlist = [x for x in fruits]
+
+# The iterable can be any iterable object, like a list, tuple, set etc.
+
+# You can use the range() function to create an iterable:
+newlist = [x for x in range(10)]
+
+# Same example, but with a condition:
+# Accept only numbers lower than 5:
+newlist = [x for x in range(10) if x < 5]
+
+# The expression is the current item in the iteration, 
+# but it is also the outcome, which you can manipulate before it ends up like a list item in the new list:
+
+
+
+
 
 
 
