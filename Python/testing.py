@@ -1,5 +1,5 @@
-thislist = ["apple", "banana", "cherry"]
-i = 0
-while i < len(thislist):
-  print(thislist[i])
-  i = i + 1
+list1 = ["a", "b" , "c"]
+list2 = [1, 2, 3]
+
+list1.extend(list2)
+print(list1)
