@@ -867,9 +867,47 @@ newlist = ['hello' for x in fruits]
 # The expression can also contain conditions, not like a filter, but as a way to manipulate the outcome:
 newlist = [x if x != "banana" else "orange" for x in fruits]
 
+# Customize Sort Function
+# Customize your own function by using the keyword argument key = function.
+# The function will return a number that will be used to sort the list (the lowest number first):
+
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+
+# By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters:
 
 
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort()
+print(thislist)
 
+# Luckily we can use built-in functions as key functions when sorting a list.
+# So if you want a case-insensitive sort function, use str.lower as a key function:
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+
+
+# What if you want to reverse the order of a list, regardless of the alphabet?
+# The reverse() method reverses the current sorting order of the elements.
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.reverse()
+print(thislist)
+
+# Copy a List
+# You cannot copy a list simply by typing list2 = list1, because: 
+# list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+# There are ways to make a copy, one way is to use the built-in List method copy()
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
 
 
 
