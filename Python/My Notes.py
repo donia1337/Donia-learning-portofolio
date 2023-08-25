@@ -1186,6 +1186,66 @@ count()	Returns the number of times a specified value occurs in a tuple
 index()	Searches the tuple for a specified value and returns the position of where it was found
 """
 
+# Python Sets
+
+myset = {"apple", "banana", "cherry"}
+
+# Sets are used to store multiple items in a single variable.
+# Set is one of 4 built-in data types in Python used to store collections of data, 
+# the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+# A set is a collection which is unordered, unchangeable*, and unindexed.
+# Note: Set items are unchangeable, but you can remove items and add new items.
+
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+
+# Duplicates of set are not allowed.
+
+thisset = {"apple", "banana", "cherry", "apple"}
+
+print(thisset)
+
+# Duplicate value will be ignored.
+
+
+# The values True and 1 are considered the same value in sets, and are treated as duplicates:
+
+thisset = {"apple", "banana", "cherry", True, 1, 2}
+
+print(thisset)
+
+#Get the length of the set by using len() function.
+
+thisset = {"apple", "banana", "cherry"}
+
+print(len(thisset))
+
+# Set items can be any type of data:
+
+set1 = {"apple", "banana", "cherry"}
+set2 = {1, 5, 7, 9, 3}
+set3 = {True, False, False}
+
+# And can contain different type of data
+
+set1 = {"abc", 34, True, 40, "male"}
+
+# From Python's perspective, sets are defined as objects with the data type 'set': <class 'set'>
+
+myset = {"apple", "banana", "cherry"}
+print(type(myset))
+
+# It is also possible to use the set() constructor to make a set.
+
+thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
+print(thisset)
+
+# Access items in sets
+# You cannot access items in a set by referring to an index or a key.
+# But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+
+
 
 
 
