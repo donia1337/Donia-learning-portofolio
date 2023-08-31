@@ -9,7 +9,9 @@ weeks = round(years * 52)
 days = round(years * 365)
 
 message = f"You have {days} days, {weeks} weeks, and {months} months left."
+message2 = f"You also have {years} years left"
 
 print(message)
+print(message2)
 
 
