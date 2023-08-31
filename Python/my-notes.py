@@ -1427,6 +1427,111 @@ update()	Update the set with the union of this set and others
 """ 
 
 
+# PYTHON DICTIONARIES
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+# Dictionaries are used to store data values in key:value pairs.
+# A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+# Dictionaries are written with curly brackets, and have keys and values:
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+
+# Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+
+
+# Dictionaries cannot have two items with the same key:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+# To determine how many items a dictionary has, use the len() function:
+
+print(len(thisdict))
+
+# The values in dictionary items can be of any data type:
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+# From Python's perspective, dictionaries are defined as objects with the data type 'dict': <class 'dict'>
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(type(thisdict))
+
+# It is also possible to use the dict() constructor to make a dictionary.
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+# Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+# You can access the items of a dictionary by referring to its key name, inside square brackets:
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict["model"]
+
+# There is also a method called get() that will give you the same result:
+
+x = thisdict.get("model")
+
+# The keys() method will return a list of all the keys in the dictionary.
+
+x = thisdict.keys()
+
+# The list of the keys is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the keys list.
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(x) #after the change
+
+# The values() method will return a list of all the values in the dictionary.
+
+x = thisdict.values()
 
 
 
