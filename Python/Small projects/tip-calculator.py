@@ -4,6 +4,12 @@ bill = float(input("What was the total bill? $"))
 
 tip = int(input("How much tip would you like to give? 10, 12, or 15? "))
 
+if tip == 0:
+    print("You're a cheap person!")
+    quit()
+
+
+
 people = int(input("How many people to split the bill? "))
 
 bill_with_tip = tip / 100 * bill + bill
