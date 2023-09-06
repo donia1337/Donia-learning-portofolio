@@ -4,13 +4,15 @@ bill = 0
 
 if height >= 120:
     print("You can ride the rollercoaster!")
-    age = int(input("What is your age?" ))
+    age = int(input("What is your age? "))
     if age < 12:
         bill = 4
         print("Child tickets are $4.")
     elif age <= 18:
         bill = 6
-        print("PYouth tickets are $6.")
+        print("Youth tickets are $6.")
+    elif age >= 45 and age <= 55:
+        print("Everything is going to be ok. Have a free ride on us!")
     else:
         bill = 10
         print("Adult tickets are $10.")
