@@ -10,3 +10,15 @@
 #   1. Install the neccessary plugins/packages
 #   2. Pull in file from an url
 #   3. Convert the data into a json file, which should be stored in this directory for further use
+
+import urllib.request
+
+data = urllib.request.urlopen("https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt")
+
+file = open("Python_project_1/data.txt", "w")
+
+for line in data:
+    line = line.decode()
+    if("#" in line) == False:
+        file.write(line)
+file.close()        
