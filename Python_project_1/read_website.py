@@ -3,3 +3,6 @@
 
 # We could for now ignore this script and just always use the "latest" data source which would be at:
 # https://services.swpc.noaa.gov/json/ovation_aurora_latest.json
+
+# We can also take the data in HPI format directly from:
+# https://services.swpc.noaa.gov/text/aurora-nowcast-hemi-power.txt
