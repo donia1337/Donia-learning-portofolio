@@ -1,4 +1,3 @@
-#Step 5
 
 import random
 
@@ -11,7 +10,7 @@ word_length = len(chosen_word)
 end_of_game = False
 lives = 6
 
-#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
+#Import the logo from hangman_art.py and print it at the start of the game.
 from hangman_art import logo
 print(logo)
 
@@ -26,7 +25,7 @@ for _ in range(word_length):
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
-    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
+#If the user has entered a letter they've already guessed, print the letter and let them know.
     if guess in display:
         print(f"You've already guessed {guess}")
 
@@ -55,6 +54,6 @@ while not end_of_game:
         end_of_game = True
         print("You win.")
 
-    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
+#Import the stages from hangman_art.py and make this error go away.
     from hangman_art import stages
     print(stages[lives])
