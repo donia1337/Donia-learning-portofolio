@@ -1,3 +1,8 @@
+string = "Hello World"
+print(string[8])
+
+string1 = 'tinker'
+print(string1[1:4])
 car = {
 "brand": "Ford",
 "model": "Mustang",
