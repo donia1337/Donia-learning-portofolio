@@ -214,13 +214,13 @@ controller:
   serviceType: ClusterIP
 
   # -- k8s service clusterIP. Only used if serviceType is ClusterIP
-  clusterIp:
+  clusterIp: 8080
   # -- k8s service port
   servicePort: 8080
   # -- k8s target port
   targetPort: 8080
   # -- k8s node port. Only used if serviceType is NodePort
-  nodePort:
+  nodePort: 8080
 
   # Use Local to preserve the client source IP and avoids a second hop for LoadBalancer and NodePort type services,
   # but risks potentially imbalanced traffic spreading.
@@ -398,7 +398,6 @@ controller:
     - git:5.2.2
     - configuration-as-code:1810.v9b_c30a_249a_4c
     - blueocean:1.27.12
-    - job-dsl:1.87
 
   # If set to false, Jenkins will download the minimum required version of all dependencies.
   # -- Download the minimum required version or latest version of all dependencies
