@@ -8,3 +8,4 @@ AWSCLIV2.pkg
 .terraform
 .terraform.lock.hcl
 terraform.tfstate*
+registry.*
