@@ -25,3 +25,8 @@ resource "kubectl_manifest" "jenkins-volume" {
 resource "kubectl_manifest" "jenkins_deployment" {
     yaml_body = file("${path.module}/yaml/jenkins-deployment.yaml")
 }
+
+// LoadBalancer for localhost:8080
+resource "kubectl_manifest" "jenkins_service" {
+    yaml_body = file("${path.module}/yaml/jenkins-service.yaml")
+}

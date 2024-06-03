@@ -3,11 +3,10 @@ start:
 	minikube -p my-minikube-cluster addons enable metrics-server
 	terraform init
 	terraform apply -auto-approve
-	@jenkins_pod=$(shell kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
-	adminPassword=$(shell kubectl exec -it $$jenkins_pod cat /var/jenkins_home/secrets/initialAdminPassword -n jenkins) && \
+	@jenkins_pod=$$(kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
+	adminPassword=$$(kubectl exec -i $$jenkins_pod -n jenkins -- cat /var/jenkins_home/secrets/initialAdminPassword) && \
 	echo "Admin password is: $$adminPassword"
-	@jenkins_pod=$(shell kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
-	kubectl -n jenkins port-forward $$jenkins_pod 8080:8080
+	minikube tunnel -p my-minikube-cluster
 
 start-with-kubectl:
 	minikube start -p my-minikube-cluster
@@ -16,12 +15,10 @@ start-with-kubectl:
 	kubectl apply -f yaml/jenkins-service-account.yaml
 	kubectl apply -f yaml/jenkins-volume.yaml
 	kubectl apply -f yaml/jenkins-deployment.yaml
-	@jenkins_pod=$(shell kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
-	adminPassword=$(shell kubectl exec -it $$jenkins_pod cat /var/jenkins_home/secrets/initialAdminPassword -n jenkins) && \
+	@jenkins_pod=$$(kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
+	adminPassword=$$(kubectl exec -i $$jenkins_pod -n jenkins -- cat /var/jenkins_home/secrets/initialAdminPassword) && \
 	echo "Admin password is: $$adminPassword"
-	@jenkins_pod=$(shell kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
-	kubectl -n jenkins port-forward $$jenkins_pod 8080:8080
-
+	minikube tunnel -p my-minikube-cluster
 
 dashboard:
 	minikube dashboard -p my-minikube-cluster
@@ -35,3 +32,5 @@ getadmin:
 	adminPassword=$$(kubectl exec -i $$jenkins_pod -n jenkins -- cat /var/jenkins_home/secrets/initialAdminPassword) && \
 	echo "Admin password is: $$adminPassword"
 
+cleanup:
+	minikube delete -p my-minikube-cluster
