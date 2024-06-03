@@ -398,6 +398,7 @@ controller:
     - git:5.2.2
     - configuration-as-code:1810.v9b_c30a_249a_4c
     - blueocean:1.27.12
+    - job-dsl:1.87
 
   # If set to false, Jenkins will download the minimum required version of all dependencies.
   # -- Download the minimum required version or latest version of all dependencies
