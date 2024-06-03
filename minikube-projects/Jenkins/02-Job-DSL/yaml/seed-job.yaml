@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: seed-job
+  namespace: jenkins
+spec:
+  template:
+    spec:
+      containers:
+      - name: seed-job
+        image: jenkins/jenkins:lts
+        command: ["jenkins-jobs", "update", "/var/jenkins_home/jobs/seedJob/config.xml"]
+        volumeMounts:
+        - name: jenkins-home
+          mountPath: /var/jenkins_home
+      restartPolicy: OnFailure
+      volumes:
+      - name: jenkins-home
+        persistentVolumeClaim:
+          claimName: jenkins-pv-claim
