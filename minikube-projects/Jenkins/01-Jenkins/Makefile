@@ -6,7 +6,10 @@ start:
 	@jenkins_pod=$$(kubectl get pods -n jenkins | grep -o 'jenkins-[^ ]*') && \
 	adminPassword=$$(kubectl exec -i $$jenkins_pod -n jenkins -- cat /var/jenkins_home/secrets/initialAdminPassword) && \
 	echo "Admin password is: $$adminPassword"
-	minikube tunnel -p my-minikube-cluster
+	@open http://localhost:8080/
+	@minikube tunnel -p my-minikube-cluster
+
+
 
 start-with-kubectl:
 	minikube start -p my-minikube-cluster
