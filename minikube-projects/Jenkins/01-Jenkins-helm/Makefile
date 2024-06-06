@@ -3,7 +3,7 @@ start:
 	minikube -p jenkins-cluster addons enable metrics-server
 	minikube -p jenkins-cluster addons enable metallb
 	terraform init
-	terraform apply
+	terraform apply -auto-approve
 	@open http://localhost:8080/
 	@minikube tunnel -p jenkins-cluster
 
